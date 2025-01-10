@@ -13,7 +13,7 @@ function App() {
 
   function handleChange(inputId, newValue) {
     setUserInput((prev) => {
-      return { ...prev, [inputId]: newValue };
+      return { ...prev, [inputId]: +newValue };
     });
   }
 
@@ -21,7 +21,7 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChangeInput={handleChange} />
-      <Results results={userInput} />
+      <Results input={userInput} />
     </>
   );
 }
